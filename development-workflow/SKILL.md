@@ -1,6 +1,6 @@
 ---
 name: development-workflow
-description: Coordinate the user's human-gated software delivery process: question-driven planning, agent-created Git worktree/branch, independent implementation and review sessions mediated by the user, and user-only commits, merges, GitHub builds and remote server commands. Use when planning or executing a software change.
+description: Coordinate the user's human-gated software delivery process - question-driven planning, agent-created Git worktree/branch, independent implementation and review sessions mediated by the user, and user-only commits, merges, GitHub builds and remote server commands. Use when planning or executing a software \change.
 ---
 
 # Development Workflow — Human-Gated Delivery
