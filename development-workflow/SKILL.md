@@ -7,7 +7,24 @@ description: Coordinate the user's human-gated software delivery process - quest
 
 ## Core operating contract
 
-The user orchestrates delivery and retains control of consequential operations. Agents work in **separate sessions**: planning, implementation, and independent review. The user carries information and decisions between the implementation and review sessions. Never assume shared chat history across sessions.
+The user orchestrates delivery and retains control of consequential operations. By default, agents work in **separate sessions**: planning, implementation, and independent review. The user carries information and decisions between the implementation and review sessions. Never assume shared chat history across sessions.
+
+### Explicit repository opt-in: orchestrated delivery
+
+A repository may define an opt-in orchestration workflow in its own `AGENTS.md`
+and project skill. Use it only when the user explicitly selects that mode and
+approves the task plan. The project contract must name the orchestrator and child
+roles, define review independence, bounded iterations, persisted state, escalation
+and acceptance criteria. In that selected mode only, the orchestrator may mediate
+implementation/review handoffs instead of the user and apply the project's review
+limit. Implementers must not self-certify as independent reviewers. Other sessions
+and repositories keep the manual workflow below. An explicit no-subagents task
+restriction still requires the user's specific override.
+
+This exception never transfers USER ONLY operations: commits, merges, rebases,
+pushes/PRs, GitHub builds/releases, remote/server commands or deployment. Unresolved
+business decisions, scope changes and blocking disputes return to the user. Changes
+to the orchestration permissions/instructions themselves require manual sessions.
 
 Use `task-sizing` to assess complexity **before** a detailed plan when task size is uncertain or the requested scope warrants it. Task sizing is a distinct activity: its size assessment is **not** a fixed-phase implementation plan.
 
